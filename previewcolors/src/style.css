@@ -1,0 +1,22 @@
+* {
+    transition: all 0.2s;
+}
+
+body {
+    overflow: hidden;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.field {
+    border: none;
+    border-bottom-right-radius: 1vw;
+    border-bottom-left-radius: 1vw;
+    width: 17.5%;
+    height: 6vh;
+    text-align: center;
+    font-size: 1.5vw;
+    background: lightgray;
+    font-weight: 600;
+}

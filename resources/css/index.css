@@ -1,0 +1,18 @@
+main {
+    display: flex;
+    height: calc(100% - 5vh);
+    overflow: hidden;
+}
+
+.content {
+    flex: 1;
+    align-content: center;
+    text-align: center;
+    font-family: serif;
+    background: #1E2D2D;
+}
+
+.content p {
+    padding-bottom: 1vh;
+    color: #FFFFFF;
+}

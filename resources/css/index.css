@@ -1,6 +1,6 @@
 main {
     display: flex;
-    height: 100%; /* website wont respond so adding comment */ /* test tsest */
+    height: 100%;
     overflow: hidden;
 }
 

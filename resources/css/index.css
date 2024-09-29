@@ -1,18 +1,11 @@
-main {
+body {
+    background: #202020;
+    color: #E1E1E1;
     display: flex;
-    height: 100%;
-    overflow: hidden;
 }
 
 .content {
     flex: 1;
     align-content: center;
     text-align: center;
-    font-family: serif;
-    background: #1E2D2D;
-}
-
-.content p {
-    padding-bottom: 1vh;
-    color: #FFFFFF;
 }

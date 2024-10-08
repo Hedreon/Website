@@ -6,13 +6,10 @@
 
 html, body {
     height: 100%;
-}
-
-body {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.no-selection {
     -webkit-user-select: none;
     user-select: none;
+}
+
+ul {
+    list-style-position: inside;
 }

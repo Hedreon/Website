@@ -1,7 +1,17 @@
 body {
     background: #202020;
     color: #E1E1E1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
+}
+
+a {
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+a:visited {
+    color: #FFFFFF;
 }
 
 .content {

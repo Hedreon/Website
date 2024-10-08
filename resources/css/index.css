@@ -5,6 +5,24 @@ body {
     display: flex;
 }
 
+.content {
+    flex: 1;
+    align-content: center;
+    text-align: center;
+}
+
+h1, h2 {
+    padding-bottom: 1vh;
+}
+
+ul {
+    display: inline-block;
+}
+
+li {
+    text-align: left;
+}
+
 a {
     color: #FFFFFF;
     font-weight: bold;
@@ -12,10 +30,4 @@ a {
 
 a:visited {
     color: #FFFFFF;
-}
-
-.content {
-    flex: 1;
-    align-content: center;
-    text-align: center;
 }

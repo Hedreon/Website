@@ -1,26 +1,9 @@
 body {
-    background: #202020;
-    color: #E1E1E1;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #272822;
+    color: #F8F8F2;
+    font-family: 'Courier New', Courier, monospace;
     display: flex;
-}
-
-.content {
-    flex: 1;
-    align-content: center;
-    text-align: center;
-}
-
-h1, h2 {
-    padding-bottom: 1vh;
-}
-
-ul {
-    display: inline-block;
-}
-
-li {
-    text-align: left;
+    flex-direction: column;
 }
 
 a {
@@ -30,4 +13,108 @@ a {
 
 a:visited {
     color: #FFFFFF;
+}
+
+.warning {
+    text-align: center;
+    background: #CD9731;
+    padding: 1vh;
+}
+
+/* Mobile */
+.box {
+    width: 70vw;
+    height: 25vh;
+    background: #414339;
+    align-items: center;
+    margin: auto;
+    border: 2pt solid #75715E7F;
+    border-radius: 2vmin;
+    box-shadow: 0 0.5vh 20px 10px rgba(0, 0, 0, 0.5);
+    transition: 1s cubic-bezier(0.75, 0, 0.15, 1);
+    overflow: hidden;
+    padding: 1vw;
+    display: flex;
+    flex-direction: column;
+    font-size: 3vw;
+    text-align: center;
+}
+
+.subject {
+    text-align: center;
+    padding: 1vh;
+}
+
+.body {
+    position: relative;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 75%;
+}
+
+.content {
+    padding-bottom: 5vh;
+}
+
+.signature {
+    position: absolute;
+    bottom: 0;
+}
+
+/* Mobile - Landscape */
+@media all and (min-width: 480px) and (orientation: landscape) {
+    .box {
+        width: 40vw;
+        height: 50vh;
+        font-size: 1.6vw;
+    }
+
+    .content {
+        padding-bottom: 10vh;
+    }
+}
+
+/* Tablet */
+@media all and (min-width: 768px) and (orientation: portrait) {
+    .box {
+        width: 60vw;
+        height: 25vh;
+        font-size: 2vw;
+    }
+}
+
+/* Tablet - Landscape */
+@media all and (min-width: 768px) and (orientation: landscape) {
+    .box {
+        width: 35vw;
+        font-size: 1.4vw;
+    }
+
+    .content {
+        padding-bottom: 10vh;
+    }
+}
+
+/* Desktop */
+@media all and (min-width: 1024px) {
+    .box {
+        width: 50vw;
+        height: 40vh;
+    }
+}
+
+/* Desktop - Wide */
+@media all and (min-width: 1200px) {
+    .box {
+        width: 35vw;
+        height: 40vh;
+        font-size: inherit;
+    }
+
+    .content {
+        padding-bottom: 5vh;
+    }
 }

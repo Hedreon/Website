@@ -21,4 +21,10 @@ html, body {
 
 ul {
     list-style-position: inside;
+
+.warning {
+    text-align: center;
+    background: var(--warn-color);
+    padding: 1vh;
+}
 }

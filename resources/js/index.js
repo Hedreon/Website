@@ -4,7 +4,7 @@ function GetRelativeTime() {
     let NewDate = new Date();
     let CurrentHour = NewDate.getHours();
 
-    if (CurrentHour <= 12 && CurrentHour != 0) {
+    if (CurrentHour <= 11 && CurrentHour != 0) {
         return "morning"
     } else if (CurrentHour >= 12 && CurrentHour <= 18) {
         return "afternoon"

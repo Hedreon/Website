@@ -1,23 +1,23 @@
 body {
-    background: #272822;
-    color: #F8F8F2;
+    background: var(--background-color);
+    color: var(--text-color);
     font-family: 'Courier New', Courier, monospace;
     display: flex;
     flex-direction: column;
 }
 
 a {
-    color: #FFFFFF;
+    color: var(--link-color);
     font-weight: bold;
 }
 
 a:visited {
-    color: #FFFFFF;
+    color: var(--link-color);
 }
 
 .warning {
     text-align: center;
-    background: #CD9731;
+    background: var(--warn-color);
     padding: 1vh;
 }
 
@@ -25,13 +25,13 @@ a:visited {
 .box {
     width: 70vw;
     height: 25vh;
-    background: #414339;
+    background: var(--foreground-color);
     align-items: center;
     margin: auto;
-    border: 2pt solid #75715E7F;
+    border: 2pt solid var(--border-color);
     border-radius: 2vmin;
     box-shadow: 0 0.5vh 20px 10px rgba(0, 0, 0, 0.5);
-    transition: 1s cubic-bezier(0.75, 0, 0.15, 1);
+    transition: 1s cubic-bezier(0.05, 0.95, 0, 1);
     overflow: hidden;
     padding: 1vw;
     display: flex;

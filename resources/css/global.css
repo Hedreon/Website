@@ -1,3 +1,12 @@
+:root {
+    --background-color: #272822;
+    --foreground-color: #414339;
+    --border-color: #75715E7F;
+    --text-color: #F8F8F2;
+    --link-color: #FFFFFF;
+    --warn-color: #CD9731;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;

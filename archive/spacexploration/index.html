@@ -7,10 +7,20 @@
     <title>Hedreon: Space Exploration</title>
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css" />
     <link rel="stylesheet" href="src/styles.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../../resources/css/global.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" />
     <link rel="icon" type="image/png" href="https://img.icons8.com/fluency/rocket.png">
 </head>
 <body>
+    <header>
+        <!-- TODO: Test if header links work -->
+        <navigator link="/">Home</navigator>
+        <dropdown type="navigation" text="Archive" active>
+            <dropdown-content>
+                <navigator link="/archive/spacexploration">Space Exploration Project</navigator>
+            </dropdown-content>
+        </dropdown>
+    </header>
     <div class="stars">
         <script src="src/stars.js"></script>
         <div class="wrapper">

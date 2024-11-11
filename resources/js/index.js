@@ -21,7 +21,7 @@ for (let Index = 0; Index < NavigatorElements.length; Index++) {
         if (NavigatorElements[Index].getAttribute("link")) {
             switch (Event.button) {
                 case 0:
-                    window.location.href = NavigatorElements[Index].getAttribute("link"); // TODO: this might cause a bug...
+                    window.location.href = NavigatorElements[Index].getAttribute("link");
                     break;
                 case 1:
                     Event.preventDefault();

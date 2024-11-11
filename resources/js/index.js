@@ -1,8 +1,9 @@
-let DynamicElement = document.getElementsByClassName("dynamic");
+const DynamicElements = document.getElementsByClassName("dynamic");
+const NavigatorElements = document.getElementsByTagName("navigator");
 
 function GetRelativeTime() {
-    let NewDate = new Date();
-    let CurrentHour = NewDate.getHours();
+    const NewDate = new Date();
+    const CurrentHour = NewDate.getHours();
 
     if (CurrentHour <= 11 && CurrentHour != 0) {
         return "morning"
@@ -15,6 +16,24 @@ function GetRelativeTime() {
     }
 }
 
+for (let Index = 0; Index < NavigatorElements.length; Index++) {
+    NavigatorElements[Index].addEventListener("mouseup", (Event) => {
+        if (NavigatorElements[Index].getAttribute("link")) {
+            switch (Event.button) {
+                case 0:
+                    window.location.href = NavigatorElements[Index].getAttribute("link"); // TODO: this might cause a bug...
+                    break;
+                case 1:
+                    Event.preventDefault();
+
+                    window.open(NavigatorElements[Index].getAttribute("link"), "_blank", "noopener, noreferrer");
+
+                    return false;
+            }
+        }
+    })
+}
+
 window.addEventListener("load", function() {
-    DynamicElement[0].innerHTML = `Best wishes and good ${GetRelativeTime()},`;
+    DynamicElements[0].innerHTML = `Best wishes and good ${GetRelativeTime()},`;
 })

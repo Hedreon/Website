@@ -6,21 +6,29 @@
     <title>Hedreon: Home</title>
     <link rel="stylesheet" href="resources/css/index.css" />
     <link rel="stylesheet" href="resources/css/global.css" />
-    <script src="resources/js/index.js"></script> 
 </head>
 <body>
     <noscript>
         <h1 class="warning">Unable to load content because JavaScript is disabled.</h1>
     </noscript>
+    <header>
+        <navigator link="/" active>Home</navigator>
+        <dropdown type="navigation" text="Archive">
+            <dropdown-content>
+                <navigator link="/archive/spacexploration">Space Exploration Project</navigator>
+            </dropdown-content>
+        </dropdown>
+    </header>
     <div class="box">
         <h1 class="subject">Hello!</h1>
         <div class="body">
-            <p class="content">Welcome to my personal website!<br />Above this box, you will (not yet) find a header filled with useful tools and pages I made.</p>
+            <p class="content">Welcome to my personal website!<br />Above this box, you will find a header filled with useful tools and pages I made.</p>
             <div class="signature">
                 <p class="dynamic"></p>
-                <p>Hedreon</p>
+                <p><strong>Hedreon</strong></p>
             </div>
         </div>
     </div>
+    <script src="resources/js/index.js"></script>
 </body>
 </html>

@@ -1,5 +1,4 @@
 const DynamicElements = document.getElementsByClassName("dynamic");
-const NavigatorElements = document.getElementsByTagName("navigator");
 
 function GetRelativeTime() {
     const NewDate = new Date();
@@ -14,24 +13,6 @@ function GetRelativeTime() {
     } else if (CurrentHour >= 21 || CurrentHour == 0) {
         return "night"
     }
-}
-
-for (let Index = 0; Index < NavigatorElements.length; Index++) {
-    NavigatorElements[Index].addEventListener("mouseup", (Event) => {
-        if (NavigatorElements[Index].getAttribute("link")) {
-            switch (Event.button) {
-                case 0:
-                    window.location.href = NavigatorElements[Index].getAttribute("link");
-                    break;
-                case 1:
-                    Event.preventDefault();
-
-                    window.open(NavigatorElements[Index].getAttribute("link"), "_blank", "noopener, noreferrer");
-
-                    return false;
-            }
-        }
-    })
 }
 
 window.addEventListener("load", function() {

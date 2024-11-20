@@ -83,9 +83,11 @@ dropdown-content > navigator:not([active]) {
 }
 
 .warning {
+    padding: 1vh;
+    font-family: 'Courier New', Courier, monospace;
     text-align: center;
     background: var(--warn-color);
-    padding: 1vh;
+    color: var(--text-color);
 }
 
 /* Mobile - Landscape */

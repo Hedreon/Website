@@ -28,7 +28,7 @@ function fadeStar(star) {
 for (let i = 0; i < starAmount; i++) {
     let cellX = Math.floor(Math.random() * gridSize);
     let cellY = Math.floor(Math.random() * gridSize);
-    
+
     while (usedCells.has(`${cellX},${cellY}`)) {
         cellX = (cellX + 1) % gridSize;
         if (cellX === 0) {

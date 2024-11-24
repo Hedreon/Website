@@ -1,4 +1,4 @@
-const DynamicElements = document.getElementsByClassName("dynamic")
+const DynamicElements = document.getElementsByClassName("dynamic");
 
 const Titles = [
     "Hedreon is offline",

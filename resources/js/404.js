@@ -1,10 +1,13 @@
 const DynamicElements = document.getElementsByClassName("dynamic");
 
+const FoundPathName = new URL(location.href).pathname.split("/");
+const FinalPathName = FoundPathName.pop() || FoundPathName.pop();
+
 const Titles = [
     "Hedreon is offline",
     "Hedreon is not found",
     "Clippy cannot be found",
-    `Hedreon: ${location.pathname.split("/").pop()}`
+    `Hedreon: ${FinalPathName}`
 ]
 
 window.addEventListener("load", function() {

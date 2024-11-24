@@ -4,7 +4,7 @@ const Titles = [
     "Hedreon is offline",
     "Hedreon is not found",
     "Clippy cannot be found",
-    `Hedreon: ${location.href.split("/").slice(-1)}`
+    `Hedreon: ${location.pathname}`
 ]
 
 window.addEventListener("load", function() {

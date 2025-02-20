@@ -75,7 +75,7 @@ dropdown-content {
     top: 100%;
     left: 0;
     font-size: 0.75em;
-    background: var(--background-color);
+    background: var(--foreground-color);
 }
 
 dropdown-content > navigator:not([active]) {

@@ -23,7 +23,7 @@ header {
     display: flex;
     justify-content: center;
     height: 8vh;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Courier New", Courier, monospace;
     background: var(--foreground-color);
     color: var(--text-color);
     border-bottom: 2pt solid var(--border-color);

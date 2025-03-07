@@ -10,15 +10,6 @@ body {
     flex-direction: column;
 }
 
-a {
-    color: var(--link-color);
-    font-weight: bold;
-}
-
-a:visited {
-    color: var(--link-color);
-}
-
 .box {
     width: 70vw;
     height: 25vh;

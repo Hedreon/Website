@@ -1,8 +1,8 @@
 :root {
-    --background-color: #004B80;
-    --foreground-color: #0071C0;
-    --border-color: #004B80;
-    --text-color: #F8F8F2;
+    --background-color: #000000;
+    --foreground-color: #404040;
+    --border-color: #505050;
+    --text-color: #F0F0F0;
     --link-color: #FFFFFF;
     --warn-color: #CD9731;
 }
@@ -43,43 +43,12 @@ navigator:hover {
     cursor: pointer;
 }
 
-navigator:not([active]), dropdown[type="navigation"]:not([active]) {
+navigator:not([active]) {
     filter: brightness(75%);
 }
 
-navigator:not([active]):hover, dropdown[type="navigation"]:not([active]):hover {
+navigator:not([active]):hover {
     filter: brightness(100%);
-}
-
-dropdown[type="navigation"] {
-    display: flex;
-    align-items: center;
-    position: relative;
-    font-size: 1.5em;
-    font-weight: bold;
-    padding-inline: 5vw;
-    transition: 0.5s cubic-bezier(0.05, 0.95, 0, 1);
-}
-
-dropdown::before {
-    content: attr(text);
-}
-
-dropdown:hover dropdown-content {
-    display: block;
-}
-
-dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    font-size: 0.75em;
-    background: var(--foreground-color);
-}
-
-dropdown-content > navigator:not([active]) {
-    display: block;
 }
 
 .warning {
@@ -96,7 +65,7 @@ dropdown-content > navigator:not([active]) {
         height: 15vh;
     }
 
-    navigator, dropdown[type="navigation"] {
+    navigator {
         padding-inline: 2vw;
     }
 }
@@ -107,7 +76,7 @@ dropdown-content > navigator:not([active]) {
         height: 6vh;
     }
 
-    navigator, dropdown[type="navigation"] {
+    navigator {
         padding-inline: 2vw;
     }
 }
@@ -118,7 +87,7 @@ dropdown-content > navigator:not([active]) {
         height: 15vh;
     }
 
-    navigator, dropdown[type="navigation"] {
+    navigator {
         padding-inline: 2vw;
     }
 }
@@ -136,7 +105,7 @@ dropdown-content > navigator:not([active]) {
         height: 6vh;
     }
 
-    navigator, dropdown[type="navigation"] {
+    navigator {
         padding-inline: 1vw;
     }
 }

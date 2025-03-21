@@ -18,7 +18,7 @@ jobs:
           ssh-keyscan -H "$hosts" > ~/.ssh/known_hosts
       - name: Pull Necessary Files
         run: |
-          sshpass -p "${{secrets.SSH_PHRASE}}" ssh -tt -o StrictHostKeyChecking=no ${{secrets.SERVER_USER}}@${{secrets.SERVER_HOST}} << EOF
+          sshpass -p "${{secrets.SSH_PHRASE}}" -P assphrase ssh -tt -o StrictHostKeyChecking=no ${{secrets.SERVER_USER}}@${{secrets.SERVER_HOST}} << EOF
             echo test
           EOF
       - name: Cleanup

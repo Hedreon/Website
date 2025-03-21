@@ -16,10 +16,11 @@ jobs:
           host="${{secrets.SERVER_HOST}}"
           hosts="$(dig +short "$host" | grep -v "\.$" | sed -z "s|\n|,|g")$host"
           ssh-keyscan -H "$hosts" > ~/.ssh/known_hosts
-      - name: Pull Necessary Files
+      - name: Pull necessary files
         run: |
           sshpass -p "${{secrets.SSH_PHRASE}}" -P assphrase ssh -tt -o StrictHostKeyChecking=no ${{secrets.SERVER_USER}}@${{secrets.SERVER_HOST}} << EOF
-            echo test
+            cd ${{secrets.SERVER_PATH}}
+            git pull origin main
             exit
           EOF
       - name: Cleanup

@@ -1,0 +1,36 @@
+:root {
+    --background-color: #202020;
+    --foreground-color: #404040;
+    --inactive-color: #CCCCCC;
+    --banner-color: #F0A030;
+    --border-color: #606060;
+    --link-color: #FFFFFF;
+    --text-color: #F0F0F0;
+
+    --transition: 0.5s cubic-bezier(0.05, 0.95, 0, 1);
+    --border: 2pt solid var(--border-color)
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    -webkit-user-select: none;
+    user-select: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, Ubuntu, "Segoe UI", Oxygen, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+a, a:visited {
+    color: var(--link-color);
+    font-weight: bold;
+}
+
+.banner {
+    padding: 1vh;
+    text-align: center;
+    background: var(--banner-color);
+}

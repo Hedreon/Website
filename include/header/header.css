@@ -1,0 +1,72 @@
+header {
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    background: var(--foreground-color);
+    border-bottom: var(--border);
+    box-shadow: 0 0 20px 5px rgb(0, 0, 0, 0.75);
+    clip-path: inset(0 0 -20px 0);
+    font-size: 1.25em;
+    transition: var(--transition);
+}
+
+.navigator {
+    display: flex;
+    align-items: center;
+    padding-inline: 2vw;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.navigator:not(.active) {
+    color: var(--inactive-color);
+    font-weight: normal;
+}
+
+.navigator:hover {
+    background: var(--border-color);
+}
+
+/* Mobile - Landscape */
+@media all and (min-width: 480px) and (orientation: landscape) {
+    header {
+        height: 14vh;
+    }
+
+    .navigator {
+        padding-inline: 2vw;
+    }
+}
+
+/* Tablet - Portrait */
+@media all and (min-width: 768px) and (orientation: portrait) {
+    header {
+        height: 6vh;
+    }
+
+    .navigator {
+        padding-inline: 2vw;
+    }
+}
+
+/* Tablet - Landscape */
+@media all and (min-width: 768px) and (orientation: landscape) {
+    header {
+        height: 14vh;
+    }
+
+    .navigator {
+        padding-inline: 4vw;
+    }
+}
+
+/* Desktop */
+@media all and (min-width: 1200px) {
+    header {
+        height: 6vh;
+    }
+
+    .navigator {
+        padding-inline: 1vw;
+    }
+}

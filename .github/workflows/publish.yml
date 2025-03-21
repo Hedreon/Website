@@ -1,0 +1,27 @@
+name: Publish Website Changes
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup SSH
+        run: |
+          install -m 600 -D /dev/null ~/.ssh/id_rsa
+          echo "${{secrets.SSH_PRIVATE}}" > ~/.ssh/id_rsa
+          host="${{secrets.SERVER_HOST}}"
+          hosts="$(dig +short "$host" | grep -v "\.$" | sed -z "s|\n|,|g")$host"
+          ssh-keyscan -H "$hosts" > ~/.ssh/known_hosts
+          sudo apt-get install sshpass
+      - name: Pull Necessary Files
+        run: |
+          sshpass -p "${{secrets.SSH_PHRASE}}" ssh -v -o StrictHostKeyChecking=no ${{secrets.SERVER_USER}}@${{secrets.SERVER_HOST}} << "ENDSSH"
+          cd ${{secrets.SERVER_PATH}}
+          git pull origin main
+          ENDSSH
+      - name: Cleanup
+        run: rm -rf ~/.ssh

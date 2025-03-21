@@ -13,13 +13,14 @@ jobs:
         run: |
           install -m 600 -D /dev/null ~/.ssh/id_rsa
           echo "${{secrets.SSH_PRIVATE}}" > ~/.ssh/id_rsa
-          ssh-keyscan -H ${{secrets.SERVER_HOST}} > ~/.ssh/known_hosts
+          host="${{secrets.SERVER_HOST}}"
+          hosts="$(dig +short "$host" | grep -v "\.$" | sed -z "s|\n|,|g")$host"
+          ssh-keyscan -H "$hosts" > ~/.ssh/known_hosts
       - name: Pull Necessary Files
         shell: bash
         run: |
-          sshpass -p "${{secrets.SSH_PHRASE}}" ssh -T -o StrictHostKeyChecking=no ${{secrets.SERVER_USER}}@${{secrets.SERVER_HOST}} << EOF
-            cd ${{secrets.SERVER_PATH}}
-            git pull origin main
+          sshpass -p "${{secrets.SSH_PHRASE}}" ssh -tt -o StrictHostKeyChecking=no ${{secrets.SERVER_USER}}@${{secrets.SERVER_HOST}} << EOF
+            echo test
           EOF
       - name: Cleanup
         run: rm -rf ~/.ssh

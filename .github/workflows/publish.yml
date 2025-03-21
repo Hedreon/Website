@@ -20,6 +20,7 @@ jobs:
         run: |
           sshpass -p "${{secrets.SSH_PHRASE}}" -P assphrase ssh -tt -o StrictHostKeyChecking=no ${{secrets.SERVER_USER}}@${{secrets.SERVER_HOST}} << EOF
             echo test
+            exit
           EOF
       - name: Cleanup
         run: rm -rf ~/.ssh

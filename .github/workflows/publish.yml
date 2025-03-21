@@ -19,7 +19,7 @@ jobs:
           sudo apt-get install sshpass
       - name: Pull Necessary Files
         run: |
-          sshpass -p "${{secrets.SSH_PHRASE}}" ssh -v -o StrictHostKeyChecking=no ${{secrets.SERVER_USER}}@${{secrets.SERVER_HOST}} << "ENDSSH"
+          sshpass -p "${{secrets.SSH_PHRASE}}" ssh -v -o StrictHostKeyChecking=no ${{secrets.SERVER_USER}}@${{secrets.SERVER_HOST}}
           cd ${{secrets.SERVER_PATH}}
           git pull origin main
           ENDSSH

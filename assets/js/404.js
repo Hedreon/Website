@@ -6,8 +6,9 @@ const FinalPathName = PoppedPathName.charAt(0).toUpperCase() + PoppedPathName.sl
 
 const Messages = [
     "Hedreon is not found",
+    "There ain't nothing here",
+    "My potato died again...",
     "Clippy cannot be found",
-    "My potato server died again...",
     `Hedreon: ${FinalPathName}`
 ];
 

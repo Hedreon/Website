@@ -7,7 +7,6 @@ header {
     box-shadow: 0 0 20px 5px rgb(0, 0, 0, 0.75);
     clip-path: inset(0 0 -20px 0);
     font-size: 1.25em;
-    transition: var(--transition);
 }
 
 .navigator {
@@ -15,16 +14,23 @@ header {
     align-items: center;
     padding-inline: 2vw;
     text-decoration: none;
+    font-weight: normal;
+    background-size: 100% 200%;
+    background-image: linear-gradient(to bottom, transparent 50%, var(--border-color) 50%);
     transition: var(--transition);
 }
 
-.navigator:not(.active) {
-    color: var(--inactive-color);
-    font-weight: normal;
+.navigator.active {
+    font-weight: bold;
+    border-bottom: 3pt solid var(--border-color);
+}
+
+.navigator:not(.active):hover {
+    background: var(--border-color);
 }
 
 .navigator:hover {
-    background: var(--border-color);
+    background-position: 0 100%;
 }
 
 /* Landscape Mobile */

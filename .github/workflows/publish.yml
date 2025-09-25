@@ -5,23 +5,34 @@ on:
     branches: ["main"]
   workflow_dispatch:
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
   publish:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Set up SSH
-        run: |
-          install -m 600 -D /dev/null ~/.ssh/id_rsa
-          echo "${{secrets.SSH_PRIVATE}}" > ~/.ssh/id_rsa
-          host="${{secrets.SERVER_HOST}}"
-          hosts="$(dig +short "$host" | grep -v "\.$" | sed -z "s|\n|,|g")$host"
-          ssh-keyscan -H "$hosts" > ~/.ssh/known_hosts
-      - name: Pull files
-        run: |
-          sshpass -p "${{secrets.SSH_PHRASE}}" -P assphrase ssh -tt -o StrictHostKeyChecking=no ${{secrets.SERVER_USER}}@${{secrets.SERVER_HOST}} << EOF
-            cd ${{secrets.SERVER_PATH}}
-            git pull origin main
-            exit
-          EOF
-      - name: Clean up
-        run: rm -rf ~/.ssh
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup
+        uses: actions/configure-pages@v5
+      - name: Upload
+        uses: actions/upload-pages-artifact@v3
+        # TODO: Disabling 'with' section to see if
+        # (a) this works
+        # and
+        # (b) we can use the dot prefix when linking files
+        #with:
+        #  path: "."
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

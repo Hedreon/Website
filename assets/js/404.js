@@ -5,12 +5,13 @@ const PoppedPathName = FoundPathName.pop() || FoundPathName.pop();
 const FinalPathName = PoppedPathName.charAt(0).toUpperCase() + PoppedPathName.slice(1);
 
 const Messages = [
-    "Hedreon is not found",
-    "There ain't nothing here",
-    "My potato died again...",
-    "Clippy cannot be found",
+    "Hedreon is offline",
+    "There ain't nothin' 'ere!",
+    "It died again!",
+    "Clippy is not found",
+    "What are you doing here?",
     `Hedreon: ${FinalPathName}`
-];
+]
 
 window.addEventListener("load", function() {
     MessageElements[0].innerHTML = Messages[Math.floor(Math.random() * Messages.length)];

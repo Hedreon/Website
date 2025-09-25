@@ -27,12 +27,8 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Upload
         uses: actions/upload-pages-artifact@v3
-        # TODO: Disabling 'with' section to see if
-        # (a) this works
-        # and
-        # (b) we can use the dot prefix when linking files
-        #with:
-        #  path: "."
+        with:
+          path: "."
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4

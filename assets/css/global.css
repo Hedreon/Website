@@ -11,7 +11,7 @@
 
 html, body {
     height: 100%;
-    -webkit-user-select: none;
     user-select: none;
+    -webkit-user-select: none;
     font-family: "Courier New", Courier, monospace;
 }

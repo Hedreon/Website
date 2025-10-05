@@ -1,3 +1,13 @@
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -9,4 +19,36 @@ body {
 
 h1 {
     font-size: clamp(2em, 4vw, 6em);
+    padding-inline: 1rem;
+}
+
+.text, .date {
+    display: flex;
+    flex-direction: row;
+}
+
+.coming, .soon, .august {
+    animation: fade 9s infinite;
+}
+
+.soon {
+    animation-delay: 3s;
+}
+
+.august {
+    animation-delay: 6s;
+}
+
+.twentysix {
+    background: linear-gradient(to bottom, #CCCCCC, #CCCCCC 33%, #00A0FF 66%, #97508F);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-size: 100% 300%;
+    background-position: top;
+    transition: background 0.5s;
+}
+
+.twentysix:hover {
+    background-position: bottom;
 }

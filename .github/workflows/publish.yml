@@ -1,4 +1,4 @@
-name: Publish Changes
+name: Publish changes
 
 on:
   push:

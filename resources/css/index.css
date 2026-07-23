@@ -27,7 +27,7 @@ h1 {
     flex-direction: row;
 }
 
-.coming, .soon, .august {
+.coming, .soon, .summer {
     animation: fade 9s infinite;
 }
 
@@ -35,12 +35,12 @@ h1 {
     animation-delay: 3s;
 }
 
-.august {
+.summer {
     animation-delay: 6s;
 }
 
-.twentysix {
-    background: linear-gradient(to bottom, #CCCCCC, #CCCCCC 33%, #00A0FF 66%, #97508F);
+.twenty-seven {
+    background: linear-gradient(to bottom, #CCCCCC, #CCCCCC 33%, #FFFFFF 66%, #00A0FF);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -49,6 +49,6 @@ h1 {
     transition: background 0.5s;
 }
 
-.twentysix:hover {
+.twenty-seven:hover {
     background-position: bottom;
 }
